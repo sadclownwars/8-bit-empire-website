@@ -1,0 +1,104 @@
+<HTML>
+ <style>
+
+ .buttons {
+  float: left;
+  border: 1px solid  rgb(0,135,40);
+  text-align: center;
+  color: rgb(0,135,40);
+  background-color: black;
+  width: 100%;
+  font-size: 25px;
+  font-family: "Silom";
+ }
+ .bottons:hover {
+  background-color: rgb(0,135,40);
+  color: black;
+ }
+ body {
+  background-image: url("background_2.png");;
+ }
+ #archer_annie {
+  background-color: rgb(0,135,40);
+ }
+ p {
+  background-color: rgb(0,135,40);
+  color: black;
+  font-family: "Silom";
+ }
+ .content {
+   display: none;
+   background-color: rgb(0,135,40);
+ }
+ img {
+   height: 100px;
+   width: 100px;
+ }
+ </style>
+
+ <body>
+
+  <a href="index.html"> Homepage </a>
+
+  <button class="buttons Collapsible" id="button1">
+	ARCHER ANNIE
+  </button>
+  <div class="content">
+   <img id="archer_annie" src="archerannie_1.png"/>
+   <p>
+	annie's stats:
+   </p>
+  </div>
+
+  <button class="buttons Collapsible" id="button2">
+	KNIGHT
+  </button>
+  <div class="content">
+   <p>
+   	knight's stats:
+   </p>
+  </div>
+
+  <button class="buttons Collapsible" id="button3">
+	SOLDIER
+  </button>
+  <div class="content">
+   <p>
+   	 soldier's stats:
+   </p>
+  </div>
+
+  <button class="buttons Collapsible" id="button4">
+  	WIZARD
+  </button>
+  <div class="content">
+   <img id="wizard" src="wizard_1.png"/>
+   <p>
+ 	wizard's stats:
+   </p>
+  </div>
+
+
+ </body>
+
+ <script type="text/javascript">
+
+ var coll = document.getElementsByClassName("Collapsible");
+ var i;
+
+ for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+   this.classList.toggle("active");
+   var content = this.nextElementSibling;
+   if (content.style.display === "block") {
+    content.style.display = "none";
+   } else {
+    content.style.display = "block";
+   }
+  });
+ }
+ 
+
+ </script>
+
+</HTML>
